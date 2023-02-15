@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import styles from './Pokemon.module.css'
 
 function Pokemon({pokemon}) {
     const name = pokemon.name;
@@ -6,7 +7,7 @@ function Pokemon({pokemon}) {
         <Head>
             <title>Pokemon, {name}</title>
         </Head>
-        <div>
+        <div className={styles.container}>
             Welcome, {pokemon?.name}!
             <img src={pokemon?.sprites.front_default}/>
         </div>
